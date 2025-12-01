@@ -4,10 +4,12 @@ prefix ?= build
 name   ?= notes
 
 input  := $(name).tex
-alias  := $(name).pdf
-output := $(prefix)/$(alias)
+output := $(prefix)/$(name).pdf
+toc    := $(prefix)/$(name).toc
 
 input += $(shell find chapter -name '*.tex')
+
+.PHONY: $(output)
 
 $(output):
 
