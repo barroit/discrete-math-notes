@@ -3,11 +3,11 @@
 prefix ?= build
 name   ?= notes
 
-input  := $(name).tex
+input  := $(name).jp.tex
 output := $(prefix)/$(name).pdf
 toc    := $(prefix)/$(name).toc
 
-input += $(shell find chapter -name '*.tex')
+input += $(shell find chapter -name '*.jp.tex')
 
 .PHONY: $(output)
 
