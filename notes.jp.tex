@@ -1,7 +1,8 @@
 % SPDX-License-Identifier: MPL-2.0
 
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
+\usepackage{float}
 \usepackage{geometry}
 \usepackage{luatexja-fontspec}
 \usepackage{mathtools}
@@ -35,6 +36,16 @@
    \setcounter{section}{0}
 }
 
+\newenvironment{topic}[1]{
+   \vspace{\parskip}
+   \textbf{#1}
+
+}{}
+
+\NewDocumentCommand{\set}{o m}{
+   \left\{\, #2 \IfValueT{#1}{\,\mid\, #1} \,\right\}
+}
+
 \geometry{a3paper,twocolumn,vmargin={1cm,2cm},hmargin=1cm,columnsep=1cm}
 
 \setmainfont[Scale=1.05]{TeX Gyre Termes}
@@ -45,6 +56,14 @@
 
 \usetikzlibrary{graphs,graphdrawing}
 \usegdlibrary{force}
+
+\newtheorem{define}{定義}[section]
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
 
 \begin{document}
 

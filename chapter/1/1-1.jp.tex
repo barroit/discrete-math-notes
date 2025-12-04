@@ -1,0 +1,75 @@
+% SPDX-License-Identifier: MPL-2.0
+
+\subsection{集合}
+
+\begin{define}
+   属するか否かが判定できる対象の集まり
+\end{define}
+
+\begin{topic}{表し方}
+   \begin{tabular}{ll}
+      列挙     & $A = \set{ 1, 2, 3, 4, 5 }$ \\
+      省略記法 & $B = \set{ 5, 10, 15, \,\ldots }$ \\
+      条件付き & $C = \set[n = 5k,\, k \, は自然数]{ n }$
+   \end{tabular}
+\end{topic}
+
+\begin{topic}{記号}
+   \begin{tabular}{ll}
+      集合 & $A, B, C$ \\
+      要素 & $a, b, c$
+   \end{tabular}
+
+   \begin{tabular}{ll}
+      対象全体 & $U$ \\
+      空集合   & $\varnothing$
+   \end{tabular}
+
+   \begin{tabular}{ll}
+      $a$は$A$の要素       & $a \in A$ \\
+      $a$は$A$の要素でない & $a \notin A$
+   \end{tabular}
+
+   \begin{tabular}{ll}
+      $A$は$B$の部分集合       & $A \subseteq B$ \\
+      $A$は$B$の部分集合でない & $A \not\subseteq B$
+   \end{tabular}
+\end{topic}
+
+\begin{topic}{部分集合}
+   \begin{description}
+      \item $A \subseteq B \iff \forall x \,(x \in A \Rightarrow x \in B)$
+
+      \item $U \subseteq U$
+
+      \item $\forall A \,(\varnothing \subseteq A)$
+
+      \item $A \subseteq B \land B \subseteq A \Rightarrow A = B$
+   \end{description}
+\end{topic}
+
+\begin{topic}{真部分集合}
+   \begin{description}
+      \item $A \subset B \iff A \subseteq B \land A \neq B$
+
+      \item $\mathbb{N} \subset \mathbb{Z} \subset
+             \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}$
+   \end{description}
+\end{topic}
+
+\begin{topic}{ベキ集合}
+   \begin{description}
+      \item $\mathcal{P}(A) = \set{X \mid X \subseteq A}$
+      \item $\mathcal{P}(A) = 2^{A}$
+   \end{description}
+\end{topic}
+
+\begin{topic}{主な集合}
+   \begin{tabular}{ll}
+      $\mathbb{N}$ & 自然数 \\
+      $\mathbb{Z}$ & 整数 \\
+      $\mathbb{Q}$ & 有理数 \\
+      $\mathbb{R}$ & 実数 \\
+      $\mathbb{C}$ & 複素数
+   \end{tabular}
+\end{topic}
